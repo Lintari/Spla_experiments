@@ -22,7 +22,9 @@ for file in csv_files:
             line = line.strip()
             if not line:
                 continue
-            parts = [p.strip() for p in line.split(",")]  # запихнули все в массивы, элементы делятся по запятой
+            parts = [
+                p.strip() for p in line.split(",")
+            ]  # запихнули все в массивы, элементы делятся по запятой
 
             if len(parts) == 1:  # значит.  название алгоритма
                 current_algo = parts[0]
@@ -50,20 +52,21 @@ for x in data.keys():
             data[x][y][z] = round((sum(data[x][y][z]) / len(data[x][y][z])), 2)
 
 
-print(json.dumps(data, ensure_ascii=False, indent=4)) # выводим среднее
+print(json.dumps(data, ensure_ascii=False, indent=4))  # выводим среднее
 
 
 datasets = sorted(list(graph_names))
 
 colors = {
     "spla": "#4C72B0",
-    "lagraph": "#DD8452",  }
+    "lagraph": "#DD8452",
+}
 
 fig, axs = plt.subplots(2, 2, figsize=(15, 11))
-axs = (axs.flatten())
+axs = axs.flatten()
 
-x = np.arange(len(datasets)) 
-width = 0.35  # ширина одного столбц 
+x = np.arange(len(datasets))
+width = 0.35  # ширина одного столбц
 
 for i, algo in enumerate(algo_names):
     ax = axs[i]
@@ -71,11 +74,27 @@ for i, algo in enumerate(algo_names):
     times_spla = [data[algo][dataset].get("spla", 0) for dataset in datasets]
     times_lagraph = [data[algo][dataset].get("lagraph", 0) for dataset in datasets]
 
-    rects1 = ax.bar(x - width / 2,times_spla,width,label="SPLA",color=colors["spla"],edgecolor="#7f7f7f",linewidth=0.5,    )
-    rects2 = ax.bar(x + width / 2, times_lagraph, width, label="LAGraph", color=colors["lagraph"], edgecolor="#7f7f7f", linewidth=0.5, )
+    rects1 = ax.bar(
+        x - width / 2,
+        times_spla,
+        width,
+        label="SPLA",
+        color=colors["spla"],
+        edgecolor="#7f7f7f",
+        linewidth=0.5,
+    )
+    rects2 = ax.bar(
+        x + width / 2,
+        times_lagraph,
+        width,
+        label="LAGraph",
+        color=colors["lagraph"],
+        edgecolor="#7f7f7f",
+        linewidth=0.5,
+    )
 
     ax.set_facecolor("#ececec")
-    ax.set_axisbelow(True)  
+    ax.set_axisbelow(True)
     ax.grid(True, which="both", color="white", linestyle="-", linewidth=0.8)
     ax.set_yscale("log")
     ax.set_title(algo.upper(), fontsize=14, fontweight="bold", pad=10)
@@ -86,7 +105,13 @@ for i, algo in enumerate(algo_names):
         ax.set_ylabel("Speedup", fontsize=12, fontweight="semibold")
 
     if i == 3:
-        ax.legend(loc="upper right", frameon=True, facecolor="white", edgecolor="none", fontsize=11,)
+        ax.legend(
+            loc="upper right",
+            frameon=True,
+            facecolor="white",
+            edgecolor="none",
+            fontsize=11,
+        )
 
 plt.tight_layout()
 plt.show()

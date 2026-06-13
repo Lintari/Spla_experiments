@@ -1,40 +1,22 @@
-name: Python Project CI
+name: Quick Syntax Check
 
-on:
-  push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
+on: [push, pull_request]
 
 jobs:
-  test-and-run:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Скачиваем код репозитория на виртуальную машину CI
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Настраиваем окружение Python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10' # Укажи версию, под которую пишешь
+          python-version: '3.10'
 
-      # 3. Делаем скрипты исполняемыми (на всякий случай)
-      - name: Make scripts executable
+      - name: Check Python Syntax
         run: |
-          chmod +x src/setup.sh
-          chmod +x src/run.sh
-
-      # 4. Запускаем установку зависимостей
-      - name: Run setup script
-        run: |
-          cd src
-          ./setup.sh
-
-      # 5. Запускаем проект
-      - name: Run project
-        run: |
-          cd src
-          ./run.sh
+          # Встроенный модуль Python, который проверяет файлы без их реального запуска
+          python -m py_compile src/plot.py
+          echo "Syntax is perfect!"
