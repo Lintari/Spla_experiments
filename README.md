@@ -2,9 +2,13 @@
 
 Чтобы подготовить файлы в папке src введите
 
- ```bash setup.sh```
+ ```
+bash setup.sh
+```
 
 После загрузки репозитория и последующей распоковки файлов введите имена графов, которые вы собираетесь использовать  
 
 
-  ```sudo bash run.sh graphname1 graphname2```
+```
+sudo bash run.sh graphname1 graphname2
+```
