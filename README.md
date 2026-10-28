@@ -51,7 +51,7 @@ sudo bash run.sh cit-Patents
 
 Файлы с результатами измерений сохраняются в каталоге `src/graph-bench/results_industrial/`.
 
-[Результаты экспериментов и сводные данные](ССЫЛКА_НА_GOOGLE_DRIVE)
+[Результаты экспериментов и сводные данные](https://github.com/Lintari/Spla_experiments/tree/main/analysis)
 
 ## Используемые проекты
 

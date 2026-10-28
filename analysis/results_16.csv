@@ -1,0 +1,46 @@
+bfs
+graph, spla, lagraph
+coAuthorsCiteseer, 10.600625, 4.99
+coPapersDBLP, 24.842375, 14.73
+amazon-2008, 20.64625, 16.63
+belgium_osm, 262.39525, 75.54
+roadNet-CA, 181.41537499999998, 125.03999999999999
+cit-Patents, 86.1685, 73.44
+rgg_n_2_22_s0, 1028.52, 779.09
+indochina-2004, 636.687125, 131.52
+rgg_n_2_23_s0, 2036.34125, 1724.18
+road_central, 1440.12125, 976.84
+sssp
+graph, spla, lagraph
+coAuthorsCiteseer, 15.904, 27.68
+coPapersDBLP, 54.67525, 54.87
+amazon-2008, 41.79925, 58.54
+belgium_osm, 385.029875, 757.03
+roadNet-CA, 302.0365, 880.02
+cit-Patents, 291.975875, 200.09
+rgg_n_2_22_s0, 1238.7337499999999, 3750.96
+indochina-2004, 1045.0162500000001, 392.87
+rgg_n_2_23_s0, 2252.8925, 8130.09
+road_central, 2141.2525, 12119.49
+pr
+graph, spla, lagraph
+coAuthorsCiteseer, 2.9446250000000003, 22.14375
+coPapersDBLP, 15.438625, 162.23125
+amazon-2008, 12.906625, 44.5125
+belgium_osm, 17.754875, 61.01875
+roadNet-CA, 35.341875, 87.53125
+cit-Patents, 72.75825, 367.675
+rgg_n_2_22_s0, 46.730625, 267.9375
+rgg_n_2_23_s0, 150.75225, 567.425
+road_central, 210.135625, 983.3
+tc
+graph, spla, lagraph
+coAuthorsCiteseer, 9.81125, 7.276
+coPapersDBLP, 405.337375, 185.267
+amazon-2008, 29.7675, 25.937333333333335
+belgium_osm, 17.398375, 13.273
+roadNet-CA, 26.248375, 20.152666666666665
+cit-Patents, 164.059, 235.16133333333332
+rgg_n_2_22_s0, 317.65925, 179.89466666666667
+rgg_n_2_23_s0, 698.7783750000001, 381.6673333333333
+road_central, 208.764375, 173.521
